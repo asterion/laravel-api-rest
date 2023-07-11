@@ -17,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::middleware('auth')->post('/', function (Request $request) {
+    return 'Endpoint /api de tipo post, protegida con autenticación.';
+});
+
